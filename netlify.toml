@@ -1,0 +1,20 @@
+# Netlify 部署配置文件
+# 用於機師選課系統的自動化部署
+
+[build]
+  # 建置命令
+  command = "npm run build"
+  # 發布的資料夾（Vite 的建置輸出）
+  publish = "dist"
+
+# SPA 路由重定向設定
+# 確保 React Router 的所有路由都正確運作
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200
+
+# 環境變數（如果需要的話）
+[build.environment]
+  NODE_VERSION = "18"
+
