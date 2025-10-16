@@ -36,7 +36,6 @@ export const RegisterPage: React.FC = () => {
     register,
     handleSubmit,
     formState: { errors },
-    watch,
   } = useForm<RegisterFormData>();
 
   /**
